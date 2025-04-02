@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 async function fetchPosts() {
     const url = "posts.json"; // Asegúrate de que esta ruta sea correcta
     const container = document.getElementById("post-container");
@@ -46,6 +47,8 @@ async function fetchPosts() {
   
   // Llamar a la función cuando se carga la página
 =======
+=======
+>>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42
 async function fetchPosts() {
     const url = "posts.json"; // Asegúrate de que esta ruta sea correcta
     const container = document.getElementById("post-container");
@@ -92,5 +95,8 @@ async function fetchPosts() {
   }
   
   // Llamar a la función cuando se carga la página
+<<<<<<< HEAD
 >>>>>>> cc3b0c4 (codigo corregido)
+=======
+>>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42
   document.addEventListener('DOMContentLoaded', fetchPosts);
