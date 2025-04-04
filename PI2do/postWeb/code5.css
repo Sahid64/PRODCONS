@@ -8,8 +8,6 @@ body {
     font-size: 18px;
 }
 
-<<<<<<< HEAD
-=======
 .barra_left{
     top: 0;/*que tan separado estara del inicio*/
     left: 0;
@@ -36,17 +34,13 @@ body {
     margin-top: 6px;
 }
 
->>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42
 /* Estilos para la sección que reemplaza al header */
 .header-section {
     background-color: #3f5022;
     color: white;
     padding: 20px;
     text-align: center;
-<<<<<<< HEAD
-=======
     margin-top: 90px;
->>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42
 }
 
 .header-section h1 {
@@ -144,9 +138,6 @@ ul {
         flex: none;
         width: 100%;
     }
-<<<<<<< HEAD
-}
-=======
 }
 
 /* Empuja el footer hacia abajo*/
@@ -281,4 +272,3 @@ h4 {
     transform: translateX(-22px)
     
 }
->>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42

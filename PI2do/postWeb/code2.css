@@ -9,8 +9,6 @@ body {
 
 }
 
-<<<<<<< HEAD
-=======
 .barra_left{
     top: 0;/*que tan separado estara del inicio*/
     left: 0;
@@ -37,20 +35,14 @@ body {
     margin-top: 6px;
 }
 
->>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42
 /* Estilos para la sección que reemplaza al header */
 .header-section {
     background-color: #3f5022;
     color: white;
     padding: 20px;
-<<<<<<< HEAD
-    padding-left: 60px;
-    text-align: center;
-=======
     /*padding-left: 60px;*/
     text-align: center;
     margin-top: 90px;
->>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42
 }
 
 .header-section h1 {
@@ -81,11 +73,7 @@ body {
 
 h1{
     text-align: left;
-<<<<<<< HEAD
-    font: size 24px;;
-=======
     font-size: 24px;
->>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42
     margin-bottom: 20px;
     margin-top: 180px;
     padding-top: 10px;
@@ -139,15 +127,12 @@ h3{
     color: #255126;
 }
 
-<<<<<<< HEAD
-=======
 .publicado{
     margin-top: 10px;
     font-size: 14px;
     text-align: right;
 }
 
->>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42
 p {
     text-align: justify;
 }
@@ -163,15 +148,9 @@ ul {
     color: white;
     padding: 20px;
     text-align: center;
-<<<<<<< HEAD
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 15px;
-=======
     max-width: 100%;
     font-size: 15px;
     margin: auto;
->>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42
 }
 
 .footer-section a {
@@ -198,8 +177,6 @@ ul {
         flex: none;
         width: 100%;
     }
-<<<<<<< HEAD
-=======
 }
 
 /* Empuja el footer hacia abajo*/
@@ -333,5 +310,4 @@ h4 {
     margin-top: -70px;
     transform: translateX(-22px)
     
->>>>>>> 499d8689da2df5b15ff270fec87942ec846e9b42
 }
