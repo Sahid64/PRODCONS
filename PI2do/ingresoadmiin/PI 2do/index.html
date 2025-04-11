@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Sección de metadatos y estilo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="logo">
+        <img src="/PI2do/imagenes/prodcon/logoSinfondo.png" alt="Logo" class="logo"/>
+        <div id="user-icon" class="user-icon">U</div>
+    </section>
+    
+
+    <!-- Pestaña lateral (inicialmente oculta) -->
+    <div id="sidebar" class="sidebar hidden">
+        <!-- Botón cierre dentro de la barra lateral -->
+        <button class="close-btn" id="close-btn">&times;</button>
+
+        <h3>ADMIN  <img src="/PI2do/imagenes/chicaLaptop.png" alt="Admin Icon"></h3>
+        <ul>
+            <li><a href="/mis-articulos"><span>Mis Artículos</span><img src="/PI2do/imagenes/composta.png" alt="Artículos"></a></li>
+            <li><a href="/configuracion"><span>Configuración</span><img src="/PI2do/imagenes/montarBicicletas.png" alt="Configuración"></a></li>
+            <li><a href="/post-planeados"><span>Post Planeados</span><img src="/PI2do/imagenes/ropaOtraVez.png" alt="Post Planeados"></a></li>
+            <li><a href="/estadisticas"><span>Estadísticas</span><img src="/PI2do/imagenes/personaBotella.png" alt="Estadísticas"></a></li>
+            <li><a href="/Inicio-sesion" id="logout-btn" class="logout"><span>Cerrar Sesión</span></a></li>
+        </ul>
+    </div>
+    <div id="overlay" class="hidden"></div>
+
+
+    <div class="recuadro-verde">
+        <h2>HOLA ADMIN!!</h2>
+        <p>Un blog exitoso se construye post a post. ¡Sigue adelante!</p>
+        <button onclick="redirectToPost()">ESCRIBIR UN NUEVO POST</button>
+    </div>
+
+    <div class="admin-recuadro-gris">
+        <div class="admin-most-viewed-articles">
+            <h2>ARTÍCULOS MÁS VISTOS</h2>
+            <div class="admin-month-selector">
+                <label for="month">Seleccione el mes:</label>
+                <select id="month" name="month" onchange="updateArticles()">
+                    <option value="enero">Enero</option>
+                    <option value="febrero">Febrero</option>
+                    <option value="marzo">Marzo</option>
+                    <option value="abril">Abril</option>
+                    <option value="mayo">Mayo</option>
+                    <option value="junio">Junio</option>
+                    <option value="julio">Julio</option>
+                    <option value="agosto">Agosto</option>
+                    <option value="septiembre">Septiembre</option>
+                    <option value="octubre">Octubre</option>
+                    <option value="noviembre">Noviembre</option>
+                    <option value="diciembre">Diciembre</option>
+                </select>
+            </div>
+    
+            <div class="admin-article-list">
+                <div class="admin-article" id="articulo1">
+                    <span class="admin-rank">01</span>
+                    <img src="/PI2do/imagenes/recogiendoBasura.png" alt="Menos plásticos más vida">
+                    <div class="admin-details">
+                        <h3>Menos plásticos más vida</h3>
+                        <p>Descubre cómo reducir el uso de plásticos y ayudar al medio ambiente.</p>
+                        <p class="admin-date">Publicado el 14 de febrero de 2025</p>
+                    </div>
+                </div>
+                <div class="admin-article" id="articulo2">
+                    <span class="admin-rank">02</span>
+                    <img src="/PI2do/imagenes/manosApuntando.png" alt="Tú puedes hacer la diferencia">
+                    <div class="admin-details">
+                        <h3>Tú puedes hacer la diferencia</h3>
+                        <p>Inicia haciendo un cambio desde tu persona.</p>
+                        <p class="admin-date">Publicado el 19 de febrero de 2025</p>
+                    </div>
+                </div>
+                <div class="admin-article" id="articulo3">
+                    <span class="admin-rank">03</span>
+                    <img src="/PI2do/imagenes/ropaOtraVez.png" alt="La Revolución de la Moda Sostenible">
+                    <div class="admin-details">
+                        <h3>La Revolución de la Moda Sostenible</h3>
+                        <p>Descubre como ayudar al medio ambiente desde nuestra vestimenta.</p>
+                        <p class="admin-date">Publicado el 19 de febrero de 2025</p>
+                    </div>
+                </div>
+                <div class="admin-article" id="articulo4">
+                    <span class="admin-rank">04</span>
+                    <img src="/PI2do/imagenes/composta.png" alt="Reduciendo residuos en casa">
+                    <div class="admin-details">
+                        <h3>Reduciendo residuos en casa</h3>
+                        <p>Inicia haciendo un cambio desde tu persona.</p>
+                        <p class="admin-date">Publicado el 19 de febrero de 2025</p>
+                    </div>
+                </div>
+                <div class="admin-article" id="articulo5">
+                    <span class="admin-rank">05</span>
+                    <img src="/PI2do/imagenes/personasComprando.png" alt="Crear tu propio huerto y sus ventajas">
+                    <div class="admin-details">
+                        <h3>Crear tu propio huerto y sus ventajas</h3>
+                        <p>Crea tu propio huerto en casa y ayuda al medio ambiente y ti mismo.</p>
+                        <p class="admin-date">Publicado el 20 de febrero de 2025</p>
+                    </div>
+                </div>
+                <div class="admin-article" id="articulo6">
+                    <span class="admin-rank">06</span>
+                    <img src="/PI2do/imagenes/telefono.png" alt="Consumo Digital y Producción Responsable">
+                    <div class="admin-details">
+                        <h3>Consumo Digital y Producción Responsable</h3>
+                        <p>Descubre como la reducción del uso de los medios digitales apoya al medio ambiente.</p>
+                        <p class="admin-date">Publicado el 21 de febrero de 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
