@@ -18,7 +18,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Georgia';
+    text-align: justify;
 }
 
 html, body {
@@ -80,9 +81,10 @@ html, body {
 }
 
 .prodcons2 {
-    width: 300px;
+    width: auto;
     height: auto;
     margin-bottom: 5.5px;
+    margin-top: -45px;
 }
 
 h4 {
@@ -125,4 +127,15 @@ ul li a {
 
 .footer3{
     line-height: 20px;
+}
+
+.footer3 a{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 45px;
+}
+
+.footer3 li{
+    list-style-type: none;
 }
