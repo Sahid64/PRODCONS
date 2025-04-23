@@ -34,7 +34,7 @@ body{
 }
 
 .post-img-1{
-    background  : url(post1.jpg);
+    background  : url(imagenes/personaBotella.png);
     width: 100%;
     height: 200px;
     background-size: cover;
@@ -44,7 +44,7 @@ body{
 }
 
 .post-img-2{
-    background: url(post2.jpg);
+    background: url(imagenes/manosApuntando.png);
     width: 100%;
     height: 200px;
     background-size: cover;
@@ -53,7 +53,7 @@ body{
 }
 
 .post-img-3{
-    background: url(post3.jpg);
+    background: url(imagenes/ropaOtraVez.png);
     width: 100%;
     height: 200px;
     background-size: cover;
@@ -62,7 +62,7 @@ body{
 }
 
 .post-img-4{
-    background: url(post4.jpg);
+    background: url(imagenes/personasComprando.png);
     width: 100%;
     height: 200px;
     background-size: cover;
@@ -71,7 +71,7 @@ body{
 }
 
 .post-img-5{
-    background: url(post5.jpg);
+    background: url(imagenes/composta.png);
     width: 100%;
     height: 200px;
     background-size: cover;
@@ -80,7 +80,7 @@ body{
 }
 
 .post-img-6{
-    background: url(post6.jpg);
+    background: url(imagenes/telefono.png);
     width: 100%;
     height: 200px;
     background-size: cover;
@@ -187,4 +187,5 @@ body{
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
 
