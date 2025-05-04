@@ -12,6 +12,7 @@
     left: 0; /* Alineación izquierda */
     right: 0;
     height: 50px;
+    z-index: 1000;
 }
 
 .flecha_left svg {
@@ -38,7 +39,7 @@
     width: 64%;           /* Define el ancho */
     height: 620px;        /* Define la altura */
     object-fit: cover;    /* Ajusta la imagen sin deformarla */
-    margin-right: 585px;
+    margin-right: 578px;
     margin-top: -35.3px;
     margin-top: 40px;
 }
@@ -63,6 +64,7 @@
     font-family: 'Arial Narrow Bold', sans-serif;
     max-width: 540px;
     margin-top: 75.5px;
+    z-index: 1;
 }
 
 .title{
@@ -228,6 +230,69 @@ h4 {
     transform: translateX(-22px)
 }
 
+/* Responsividad para dispositivos más pequeños (pantallas menores a 768px) */
+@media (max-width: 768px) {
+    .sobrecont {
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+        justify-content: center; /* Alinea los elementos verticalmente */
+        margin: 10px auto;
+    }
 
+    .imagenp {
+        width: 90%; /* Ajusta el ancho de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-top: 10px; /* Añade algo de espacio arriba */
+    }
 
+    .cuadro-info {
+        position: static; /* Elimina el posicionamiento absoluto */
+        top: auto;
+        right: auto;
+        transform: none;
+        margin-top: 20px; /* Espaciado desde la imagen */
+        width: 90%; /* Ajusta el ancho */
+        height: auto; /* Ajusta la altura según el contenido */
+        padding: 20px; /* Ajusta el padding */
+    }
 
+    .title {
+        font-size: 24px; /* Ajusta el tamaño del título */
+        line-height: 32px;
+        text-align: center;
+    }
+
+    .texto {
+        font-size: 18px; /* Ajusta el tamaño del texto */
+        line-height: 26px;
+        width: 100%; /* Asegura que el texto ocupe todo el espacio */
+        text-align: justify;
+    }
+}
+
+/* Responsividad para dispositivos más pequeños (pantallas menores a 480px) */
+@media (max-width: 480px) {
+    .imagenp {
+        width: 100%; /* La imagen ocupará todo el ancho */
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .cuadro-info {
+        width: 100%; /* Hace que el cuadro de info ocupe todo el ancho */
+        padding: 15px; /* Ajusta el padding */
+        margin-top: 15px; /* Asegura un buen margen */
+    }
+
+    .title {
+        font-size: 20px; /* Ajusta el tamaño del título */
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .texto {
+        font-size: 16px; /* Ajusta el tamaño del texto */
+        line-height: 24px;
+    }
+}
