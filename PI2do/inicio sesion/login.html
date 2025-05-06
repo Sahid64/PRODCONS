@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODCONS</title>
+    
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="login.css" rel="stylesheet">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- ============================================= -->
+    <!-- SECCIÓN DE ANIMACIÓN DE FONDO -->
+    <!-- ============================================= -->
+    <!-- Contiene círculos animados que flotan en el fondo -->
+    <div class="background-animation">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+    
+    <!-- ============================================= -->
+    <!-- CABECERA PRINCIPAL -->
+    <!-- ============================================= -->
+    <header> 
+        <div class="header-contenedor">
+            <div class="principal"></div>
+        </div>
+    </header>
+
+    <!-- ============================================= -->
+    <!-- SECCIÓN DEL LOGO -->
+    <!-- ============================================= -->
+    <section class="logo"> 
+        <div class="header_2">
+            <img class="prodcons" src="/PI2do/imagenes/prodcon/logoSinfondo.png" alt="Logo"> 
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ============================================= -->
+    <section class="contenedor-main">
+        <section class="wrapper">
+            <!-- ============================================= -->
+            <!-- FORMULARIO DE LOGIN (visible por defecto) -->
+            <!-- ============================================= -->
+            <div class="form" id="login-form">
+                <h1>INGRESAR USUARIO</h1>
+                <form action="">
+                    <!-- Campo para el correo electrónico -->
+                    <div class="buton">
+                        <div class="input-area">
+                            <input type="email" placeholder="Correo Electrónico" required>
+                            <i class="fas fa-envelope"></i> <!-- Icono de Font Awesome -->
+                        </div>
+                    </div>
+
+                    <!-- Campo para la contraseña -->
+                    <div class="buton">
+                        <div class="input-area">
+                            <input type="password" placeholder="Contraseña" required>
+                            <i class="fas fa-lock"></i> <!-- Icono de Font Awesome -->
+                        </div>
+                    </div>
+
+                    <!-- Checkbox "Recuérdame" -->
+                    <div class="recuerdame">
+                        <input class="C" type="checkbox">
+                        <label>Recuérdame</label>
+                    </div>
+        
+                    <!-- Botón de envío -->
+                    <input type="submit" value="INGRESAR"> 
+                    
+                    <!-- Enlace para alternar al formulario de registro -->
+                    <div class="alternar-form">
+                        <p>¿No tienes una cuenta? <a href="#" id="mostrar-registro">Regístrate aquí</a></p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- ============================================= -->
+            <!-- FORMULARIO DE REGISTRO (oculto inicialmente) -->
+            <!-- ============================================= -->
+            <div class="form" id="registro-form" style="display: none;">
+                <h1>REGISTRAR USUARIO</h1>
+                <form action="">
+                    <!-- Campo para el nombre completo -->
+                    <div class="buton">
+                        <div class="input-area">
+                            <input type="text" placeholder="Nombre Completo" required>
+                            <i class="fas fa-user"></i> <!-- Icono de Font Awesome -->
+                        </div>
+                    </div>
+
+                    <!-- Campo para el correo electrónico -->
+                    <div class="buton">
+                        <div class="input-area">
+                            <input type="email" placeholder="Correo Electrónico" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+
+                    <!-- Campo para la contraseña -->
+                    <div class="buton">
+                        <div class="input-area">
+                            <input type="password" placeholder="Contraseña" required>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+
+                    <!-- Campo para confirmar la contraseña -->
+                    <div class="buton">
+                        <div class="input-area">
+                            <input type="password" placeholder="Confirmar Contraseña" required>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+
+                    <!-- Checkbox de términos y condiciones -->
+                    <div class="terminos">
+                        <input class="C" type="checkbox" required>
+                        <label>Acepto los <a href="/PI2do/footer/parafooter/term-condi/term-condi.html">términos y condiciones</a></label>
+                    </div>
+        
+                    <!-- Botón de envío -->
+                    <input type="submit" value="REGISTRARSE"> 
+                    
+                    <!-- Enlace para alternar al formulario de login -->
+                    <div class="alternar-form">
+                        <p>¿Ya tienes una cuenta? <a href="#" id="mostrar-login">Inicia sesión aquí</a></p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- ============================================= -->
+            <!-- CONTENEDOR DEL LOGO (lado derecho) -->
+            <!-- ============================================= -->
+            <div class="contenedor-logo">
+                <img src="/PI2do/imagenes/login.png" alt="Imagen de fondo" class="bg-image">
+                <figure>
+                    <img src="/PI2do/imagenes/prodcon/logoSinfondo.png" alt="Logo transparente" class="logo-portada">
+                   
+                </figure>
+            </div>
+        </section>
+    </section>
+    
+    <!-- ============================================= -->
+    <!-- SCRIPTS JAVASCRIPT -->
+    <!-- ============================================= -->
+    <script>
+        // Función para alternar entre formularios de login y registro
+        document.getElementById('mostrar-registro').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('registro-form').style.display = 'block';
+        });
+        
+        document.getElementById('mostrar-login').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('registro-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        });
+
+        // Efectos de hover para los botones de envío
+        const submitButtons = document.querySelectorAll('input[type="submit"]');
+        submitButtons.forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
